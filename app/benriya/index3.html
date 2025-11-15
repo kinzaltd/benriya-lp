@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>便利屋コンシェルジュ｜不用品回収・遺品整理・引っ越し</title>
+  <meta name="description" content="富裕層にも選ばれる丁寧で清潔な不用品回収・遺品整理・引っ越しサービス。一都三県中心に即日対応。見積り無料。">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0b2443;
+      --gold: #d2aa4a;
+      --gold-dark: #b48d33;
+      --bg: #f5f6f8;
+      --text: #222;
+      --muted: #6b7280;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Noto Sans JP', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--text);
+      background: #ffffff;
+      padding-bottom: 90px; /* 固定CTAのぶん余白 */
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* Header */
+    header {
+      background: var(--navy);
+      color: #fff;
+      padding: 14px 0;
+    }
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-block small {
+      font-size: 11px;
+      opacity: 0.7;
+    }
+    .logo-block strong {
+      display: block;
+      font-size: 20px;
+      margin-top: 2px;
+    }
+    nav.header-nav {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+    }
+    nav.header-nav a {
+      opacity: 0.9;
+    }
+    .header-phone {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Hero */
+    .hero {
+      background: #f3f5f8;
+      padding: 40px 0 56px;
+    }
+    .hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 32px;
+      align-items: center;
+    }
+    .hero-copy small {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: .1em;
+    }
+    .hero-copy h1 {
+      margin: 10px 0 8px;
+      font-size: 28px;
+      line-height: 1.4;
+      color: var(--navy);
+    }
+    .hero-copy p.lead {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: #1b1b1b;
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-primary:hover {
+      background: var(--gold-dark);
+    }
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--navy);
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      border: 1px solid #e5e7eb;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hero-note {
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .hero-visual {
+      text-align: right;
+    }
+    .hero-visual img {
+      max-width: 420px;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+    }
+
+    /* Section title */
+    .section {
+      padding: 56px 0;
+    }
+    .section h2 {
+      text-align: center;
+      font-size: 22px;
+      margin: 0 0 28px;
+      color: var(--navy);
+    }
+
+    /* 主なサービス */
+    .services-grid {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .service-card {
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 32px rgba(15, 23, 42, 0.08);
+    }
+    .service-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      display: block;
+    }
+    .service-body {
+      padding: 14px 16px 16px;
+    }
+    .service-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin: 0 0 6px;
+      color: #111827;
+    }
+    .service-text {
+      margin: 0;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Before & After */
+    #before-after {
+      padding: 56px 0 40px;
+      background: #f7f7f8;
+    }
+    #before-after h2 {
+      text-align: center;
+      font-size: 22px;
+      margin: 0 0 28px;
+      color: var(--navy);
+    }
+    .before-after {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .before-after > div {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 14px 16px 18px;
+      box-shadow: 0 10px 24px rgba(15,23,42,0.06);
+      text-align: center;
+    }
+    .before-after h3 {
+      margin: 0 0 8px;
+      font-size: 15px;
+      color: var(--navy);
+    }
+    .before-after img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      color: #ffffff;
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 13px;
+    }
+
+    /* 固定CTA */
+    .cta-fixed {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      z-index: 50;
+    }
+    .cta-fixed a {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(15,23,42,0.18);
+    }
+
+    @media (max-width: 960px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+      .hero-visual {
+        text-align: center;
+      }
+      .hero-visual img {
+        max-width: 340px;
+      }
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .before-after {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    @media (max-width: 640px) {
+      nav.header-nav { display:none; }
+      .hero-inner { padding: 0 16px; }
+      .hero-copy h1 { font-size: 22px; }
+      .services-grid {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 0 16px 32px;
+      }
+      header .header-inner {
+        flex-direction: row;
+        gap: 12px;
+      }
+      .header-phone {
+        padding-inline: 12px;
+        font-size: 12px;
+      }
+      .before-after {
+        padding: 0 16px;
+      }
+      .cta-fixed {
+        flex-direction: column;
+        align-items: center;
+      }
+      .cta-fixed a {
+        width: 90%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="wrap header-inner">
+      <div class="logo-block">
+        <small>富裕層にも支持される便利屋</small>
+        <strong>便利屋コンシェルジュ</strong>
+      </div>
+      <nav class="header-nav">
+        <a href="#services">サービス</a>
+        <a href="#before-after">実績</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+      <a href="tel:0120996134" class="header-phone">
+        📞 0120-996-134
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <small>一都三県 即日対応</small>
+        <h1>
+          富裕層にも選ばれる、<br>
+          丁寧で清潔な<br>
+          不用品回収・遺品整理サービス
+        </h1>
+        <p class="lead">
+          急な片付けやお引っ越し、大量の処分品でお困りの方へ。<br>
+          経験豊富なスタッフが、買取から処分・運搬までワンストップでサポートいたします。
+        </p>
+        <div class="hero-buttons">
+          <a href="tel:0120996134" class="btn-primary">
+            今すぐ相談（無料）
+          </a>
+          <a href="#contact" class="btn-secondary">
+            お問い合わせ・見積り
+          </a>
+        </div>
+        <p class="hero-note">
+          事前にご連絡いただければ、夜間やお忙しい時間帯の対応もご相談可能です。
+        </p>
+      </div>
+      <div class="hero-visual">
+        <img src="images/hero-main.jpg" alt="玄関前で笑顔で対応する清潔感のあるスタッフ">
+      </div>
+    </div>
+  </section>
+
+  <!-- 主なサービス -->
+  <section class="section" id="services">
+    <h2>主なサービス</h2>
+
+    <div class="services-grid">
+      <article class="service-card">
+        <img src="images/service-fuyohin.jpg" alt="不用品回収を行うスタッフ">
+        <div class="service-body">
+          <h3 class="service-title">不用品回収・買取</h3>
+          <p class="service-text">
+            家具・家電・粗大ごみから店舗什器まで、どんな不用品も丁寧に回収。状態の良いものは査定・買取し、処分費用の削減もご提案します。
+          </p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="images/service-ihin.jpg" alt="遺品整理を丁寧に行うスタッフ">
+        <div class="service-body">
+          <h3 class="service-title">遺品整理・生前整理</h3>
+          <p class="service-text">
+            ご遺族のお気持ちに寄り添いながら、仕分け・梱包・搬出まで一貫して対応。貴重品の探索や買取のご相談も承ります。
+          </p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="images/service-hikkoshi.jpg" alt="ダンボールを運ぶ引っ越しスタッフ">
+        <div class="service-body">
+          <h3 class="service-title">引っ越しサービス</h3>
+          <p class="service-text">
+            単身のお引っ越しからご家族・オフィス移転まで。梱包・運搬・不要品の同時回収で、スムーズなお引っ越しを実現します。
+          </p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="images/service-clean.jpg" alt="キッチンを清掃するスタッフ">
+        <div class="service-body">
+          <h3 class="service-title">ハウスクリーニング</h3>
+          <p class="service-text">
+            キッチン・浴室・水まわり・空室クリーニングなど、プロの技術で徹底洗浄。高級マンションや戸建ての実績も多数ございます。
+          </p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="images/service-tree.jpg" alt="庭木を伐採している作業員">
+        <div class="service-body">
+          <h3 class="service-title">伐採・草刈り</h3>
+          <p class="service-text">
+            伸びすぎた庭木や雑草の伐採・草刈りにも対応。安全第一で作業し、すっきりとしたお庭づくりをお手伝いいたします。
+          </p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="images/service-reform.jpg" alt="室内でリフォーム作業を行うスタッフ">
+        <div class="service-body">
+          <h3 class="service-title">リフォーム・解体・店舗撤去</h3>
+          <p class="service-text">
+            部分的なリフォームから原状回復工事・解体、店舗や事務所の撤去まで、提携職人と連携したワンストップ対応が可能です。
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Before & After -->
+<!-- Before & After -->
+<section id="before-after">
+  <h2>Before &amp; After</h2>
+
+  <div class="before-after">
+
+    <!-- 不用品回収（部屋） -->
+    <div>
+      <h3>不用品回収 Before</h3>
+      <img src="images/before-recycle.jpg" alt="不用品が散らかった部屋">
+    </div>
+    <div>
+      <h3>不用品回収 After</h3>
+      <img src="images/after-recycle.jpg" alt="片付けられてきれいになった部屋">
+    </div>
+
+    <!-- 工場の不用品回収 -->
+    <div>
+      <h3>不用品回収 Before（工場）</h3>
+      <img src="images/before-fac-recycle.jpg" alt="不用品が散らかった工場">
+    </div>
+    <div>
+      <h3>不用品回収 After（工場）</h3>
+      <img src="images/after-fac-recycle.jpg" alt="片付けられてきれいになった工場">
+    </div>
+
+    <!-- ハウスクリーニング -->
+    <div>
+      <h3>ハウスクリーニング Before</h3>
+      <img src="images/before-clean.jpg" alt="汚れたキッチンやバスルーム">
+    </div>
+    <div>
+      <h3>ハウスクリーニング After</h3>
+      <img src="images/after-clean.jpg" alt="清潔でピカピカになったキッチンやバスルーム">
+    </div>
+
+    <!-- 庭木の伐採 -->
+    <div>
+      <h3>庭木の伐採 Before</h3>
+      <img src="images/before-tree.jpg" alt="手入れのされていない庭木">
+    </div>
+    <div>
+      <h3>庭木の伐採 After</h3>
+      <img src="images/after-tree.jpg" alt="綺麗に手入れされた庭木">
+    </div>
+
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>© 便利屋コンシェルジュ | 一都三県対応 | TEL: 0120-996-134</p>
+  </footer>
+
+  <!-- 固定CTA -->
+  <div class="cta-fixed">
+    <a href="tel:0120996134">📞 電話する</a>
+    <a href="https://line.me/R/ti/p/@yourlineid">💬 LINE相談</a>
+    <a href="contact.html">✉️ フォーム</a>
+  </div>
+
+</body>
+</html>
