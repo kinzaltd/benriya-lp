@@ -1,5 +1,6 @@
 "use client";
 
+import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -15,6 +16,17 @@ import {
 } from "recharts";
 
 export default function ServiceLP() {
+  const searchParams = useSearchParams();
+  const lineType = searchParams.get("line");
+
+  const lineUrls = {
+  default: "https://lin.ee/xxvBGTY",
+  yashiro: "https://lin.ee/pQUaZDB",
+  agencyB: "https://lin.ee/B社用URL",
+  agencyC: "https://lin.ee/C社用URL",
+};
+
+const lineUrl = lineUrls[lineType] || lineUrls.default;
   const data = [
     { name: "A社", price: 150 },
     { name: "B社", price: 120 },
@@ -42,12 +54,14 @@ export default function ServiceLP() {
           <br />
           どんな不用品も破格でスピーディーに解決します。
         </p>
-        <Button
-          size="lg"
-          className="rounded-2xl shadow-lg bg-green-800 text-white font-bold hover:bg-green-900"
-        >
-          LINEで無料見積もりする
-        </Button>
+<a href={lineUrl} target="_blank" rel="noopener noreferrer">
+  <Button
+    size="lg"
+    className="rounded-2xl shadow-lg bg-green-800 text-white font-bold hover:bg-green-900"
+  >
+    LINEで無料見積もりする
+  </Button>
+</a>
       </section>
 
       {/* 時代背景 */}
@@ -235,12 +249,14 @@ export default function ServiceLP() {
           一都三県を中心に、法人・個人問わず全国対応可能です。
         </p>
         <div className="flex justify-center gap-4 flex-wrap">
-          <Button
-            size="lg"
-            className="rounded-2xl shadow-lg bg-green-300 hover:bg-green-400 text-green-900 font-bold transition-all duration-200"
-          >
-            LINEで無料見積もりする
-          </Button>
+<a href={lineUrl} target="_blank" rel="noopener noreferrer">
+  <Button
+    size="lg"
+    className="rounded-2xl shadow-lg bg-green-300 hover:bg-green-400 text-green-900 font-bold transition-all duration-200"
+  >
+    LINEで無料見積もりする
+  </Button>
+</a>
           <Button
             size="lg"
             className="rounded-2xl shadow-lg border border-white bg-transparent text-white hover:bg-green-600 transition-all duration-200"
