@@ -56,9 +56,7 @@ const lineUrl = lineUrls[lineType] || lineUrls.default;
         </p>
 <a
   href={lineUrl}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-block rounded-2xl shadow-lg bg-green-300 hover:bg-green-400 text-green-900 font-bold transition-all duration-200 px-6 py-3 text-lg"
+  className="inline-block rounded-2xl shadow-lg bg-green-800 text-white font-bold hover:bg-green-900 px-6 py-3 text-lg cursor-pointer"
 >
   LINEで無料見積もりする
 </a>
@@ -251,9 +249,7 @@ const lineUrl = lineUrls[lineType] || lineUrls.default;
         <div className="flex justify-center gap-4 flex-wrap">
 <a
   href={lineUrl}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-block rounded-2xl shadow-lg bg-green-300 hover:bg-green-400 text-green-900 font-bold transition-all duration-200 px-6 py-3 text-lg"
+  className="inline-block rounded-2xl shadow-lg bg-green-300 hover:bg-green-400 text-green-900 font-bold transition-all duration-200 px-6 py-3 text-lg cursor-pointer"
 >
   LINEで無料見積もりする
 </a>
