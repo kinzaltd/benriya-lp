@@ -1,6 +1,7 @@
+
 "use client";
 
-import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -16,17 +17,19 @@ import {
 } from "recharts";
 
 export default function ServiceLP() {
-  const searchParams = useSearchParams();
-  const lineType = searchParams.get("line");
-
   const lineUrls = {
-  default: "https://lin.ee/xxvBGTY",
-  yashiro: "https://lin.ee/pQUaZDB",
-  agencyB: "https://lin.ee/B社用URL",
-  agencyC: "https://lin.ee/C社用URL",
-};
+    default: "https://lin.ee/xxvBGTY",
+    yashiro: "https://lin.ee/pQUaZDB",
+  };
 
-const lineUrl = lineUrls[lineType] || lineUrls.default;
+  const [lineUrl, setLineUrl] = useState(lineUrls.default);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const lineType = params.get("line");
+    setLineUrl(lineUrls[lineType] || lineUrls.default);
+  }, []);
+
   const data = [
     { name: "A社", price: 150 },
     { name: "B社", price: 120 },
@@ -49,17 +52,19 @@ const lineUrl = lineUrls[lineType] || lineUrls.default;
           不用品を資源へ。<br />
           暮らしと環境を守る不用品回収サービス
         </motion.h1>
+
         <p className="max-w-2xl mx-auto text-lg mb-8">
           家具・家電・ごみ屋敷・遺品整理・オフィス撤去など、
           <br />
           どんな不用品も破格でスピーディーに解決します。
         </p>
-<a
-  href={lineUrl}
-  className="inline-block rounded-2xl shadow-lg bg-green-800 text-white font-bold hover:bg-green-900 px-6 py-3 text-lg cursor-pointer relative z-50"
->
-  LINEで無料見積もりする
-</a>
+
+        <a
+          href={lineUrl}
+          className="inline-block rounded-2xl shadow-lg bg-green-800 text-white font-bold hover:bg-green-900 px-6 py-3 text-lg cursor-pointer relative z-50"
+        >
+          LINEで無料見積もりする
+        </a>
       </section>
 
       {/* 時代背景 */}
@@ -76,6 +81,7 @@ const lineUrl = lineUrls[lineType] || lineUrls.default;
               </p>
             </CardContent>
           </Card>
+
           <Card className="shadow-md">
             <CardContent className="p-6">
               <LineChart className="w-10 h-10 text-green-600 mb-4" />
@@ -247,12 +253,13 @@ const lineUrl = lineUrls[lineType] || lineUrls.default;
           一都三県を中心に、法人・個人問わず全国対応可能です。
         </p>
         <div className="flex justify-center gap-4 flex-wrap">
-<a
-  href={lineUrl}
-  className="inline-block rounded-2xl shadow-lg bg-green-300 hover:bg-green-400 text-green-900 font-bold transition-all duration-200 px-6 py-3 text-lg cursor-pointer"
->
-  LINEで無料見積もりする
-</a>
+          <a
+            href={lineUrl}
+            className="inline-block rounded-2xl shadow-lg bg-green-300 hover:bg-green-400 text-green-900 font-bold transition-all duration-200 px-6 py-3 text-lg cursor-pointer relative z-50"
+          >
+            LINEで無料見積もりする
+          </a>
+
           <Button
             size="lg"
             className="rounded-2xl shadow-lg border border-white bg-transparent text-white hover:bg-green-600 transition-all duration-200"
