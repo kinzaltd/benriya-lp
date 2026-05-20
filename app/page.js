@@ -55,7 +55,7 @@ const lineUrl = lineUrls[lineType] || lineUrls.default;
           どんな不用品も破格でスピーディーに解決します。
         </p>
 <a
-  href="https://www.google.com"
+  href={lineUrl}
   className="inline-block rounded-2xl shadow-lg bg-green-800 text-white font-bold hover:bg-green-900 px-6 py-3 text-lg cursor-pointer relative z-50"
 >
   LINEで無料見積もりする
