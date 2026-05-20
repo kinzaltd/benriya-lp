@@ -63,7 +63,6 @@ const lineUrl = lineUrls[lineType] || lineUrls.default;
 >
   LINEで無料見積もりする
 </button>
-
       </section>
 
       {/* 時代背景 */}
