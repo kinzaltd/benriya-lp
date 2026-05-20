@@ -20,6 +20,7 @@ export default function ServiceLP() {
   const lineUrls = {
     default: "https://lin.ee/xxvBGTY",
     yashiro: "https://lin.ee/pQUaZDB",
+    tss:"https://lin.ee/W4zDUPS",
   };
 
   const [lineUrl, setLineUrl] = useState(lineUrls.default);
