@@ -54,13 +54,13 @@ const lineUrl = lineUrls[lineType] || lineUrls.default;
           <br />
           どんな不用品も破格でスピーディーに解決します。
         </p>
-<a href={lineUrl} target="_blank" rel="noopener noreferrer">
-  <Button
-    size="lg"
-    className="rounded-2xl shadow-lg bg-green-800 text-white font-bold hover:bg-green-900"
-  >
-    LINEで無料見積もりする
-  </Button>
+<a
+  href={lineUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block rounded-2xl shadow-lg bg-green-300 hover:bg-green-400 text-green-900 font-bold transition-all duration-200 px-6 py-3 text-lg"
+>
+  LINEで無料見積もりする
 </a>
       </section>
 
@@ -249,13 +249,13 @@ const lineUrl = lineUrls[lineType] || lineUrls.default;
           一都三県を中心に、法人・個人問わず全国対応可能です。
         </p>
         <div className="flex justify-center gap-4 flex-wrap">
-<a href={lineUrl} target="_blank" rel="noopener noreferrer">
-  <Button
-    size="lg"
-    className="rounded-2xl shadow-lg bg-green-300 hover:bg-green-400 text-green-900 font-bold transition-all duration-200"
-  >
-    LINEで無料見積もりする
-  </Button>
+<a
+  href={lineUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block rounded-2xl shadow-lg bg-green-300 hover:bg-green-400 text-green-900 font-bold transition-all duration-200 px-6 py-3 text-lg"
+>
+  LINEで無料見積もりする
 </a>
           <Button
             size="lg"
